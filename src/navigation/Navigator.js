@@ -7,7 +7,13 @@ const Stack = createStackNavigator();
 
 export const Navigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: 'rgb(23,136,244)' },
+        headerTitleStyle: { color: 'white' },
+        headerBackTitleStyle: { color: 'white' }, 
+        headerTintColor:'white'
+      }}>
       <Stack.Screen name="Home" component={CitiesScreen} />
       <Stack.Screen name="Details" component={SingleCityScreen} />
     </Stack.Navigator>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Button, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { Button } from '../components/Button';
 
 class CitiesScreen extends React.Component {
   //290,45 K − 273,15 = 17,3 °C
@@ -19,11 +20,28 @@ class CitiesScreen extends React.Component {
           <Button
             title="Alexandria"
             onPress={() => this.navigateToDetails('Alexandria')}
+
           />
           <Button
             title="Rome"
             onPress={() => this.navigateToDetails('Rome')}
           />
+          {/* <View style={styles.buttonStyle}> */}
+
+          {/* <Button
+              title="Cairo"
+              onPress={() => this.navigateToDetails('Cairo')}
+              color='white'
+            />
+          </View>
+          <Button
+            title="Alexandria"
+            onPress={() => this.navigateToDetails('Alexandria')}
+          />
+          <Button
+            title="Rome"
+            onPress={() => this.navigateToDetails('Rome')}
+          /> */}
 
         </View>
       </SafeAreaView>
@@ -36,11 +54,15 @@ export default (CitiesScreen);
 
 const styles = StyleSheet.create({
   safeView: {
-    flex: 1
+    backgroundColor: 'rgb(23,136,244)',
+    flex: 1,
   },
   container: {
     justifyContent: 'center',
     flex: 1,
     alignItems: 'center',
-  }
+    backgroundColor: 'rgb(23,136,244)', 
+    paddingHorizontal: 20
+  },
+
 })
